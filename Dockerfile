@@ -1,11 +1,13 @@
 FROM golang:1.13.7
 
-COPY . /var/www
+WORKDIR /app
 
-WORKDIR /var/www
+COPY ./ /app
 
 RUN go mod download
 
+RUN go get github.com/githubnemo/CompileDaemon
+
 EXPOSE 3000
 
-CMD ["go", "run", "/var/www/src/server.go"]
+ENTRYPOINT CompileDaemon --command="./main"
