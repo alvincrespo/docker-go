@@ -11,5 +11,5 @@ docker build -t gecko .
 ## Running
 
 ```
-docker run -i -t -p 3000:3000 gecko
+docker run -i -t -v ~/path/to/local/app:/app -p 3000:3000 gecko
 ```
