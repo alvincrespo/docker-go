@@ -20,11 +20,6 @@ docker-compose up
 
 ## TODO
 
-- Add templating
-  - Base Layout
-  - Header
-  - Footer
-  - Content
 - Add routing
 - Add controllers
 - Add UI (mounting)
